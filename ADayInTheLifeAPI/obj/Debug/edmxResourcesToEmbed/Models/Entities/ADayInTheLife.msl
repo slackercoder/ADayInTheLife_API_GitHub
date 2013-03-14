@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ADayInTheLifeModelStoreContainer" CdmEntityContainer="ADayInTheLifeEntities">
+    <EntitySetMapping Name="Avatars">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.Avatar">
+        <MappingFragment StoreEntitySet="Avatar">
+          <ScalarProperty Name="AvatarId" ColumnName="AvatarId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Buildings">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.Building">
+        <MappingFragment StoreEntitySet="Building">
+          <ScalarProperty Name="SocietyTypeId" ColumnName="SocietyTypeId" />
+          <ScalarProperty Name="BuildingId" ColumnName="BuildingId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Educations">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.Education">
+        <MappingFragment StoreEntitySet="Education">
+          <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+          <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="Hours" ColumnName="Hours" />
+          <ScalarProperty Name="PrerequisiteId" ColumnName="PrerequisiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.Game">
+        <MappingFragment StoreEntitySet="Game">
+          <ScalarProperty Name="CurrentTurn" ColumnName="CurrentTurn" />
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="Players" ColumnName="Players" />
+          <ScalarProperty Name="WinCondition1" ColumnName="WinCondition1" />
+          <ScalarProperty Name="WinCondition2" ColumnName="WinCondition2" />
+          <ScalarProperty Name="WinCondition3" ColumnName="WinCondition3" />
+          <ScalarProperty Name="WinCondition4" ColumnName="WinCondition4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+          <ScalarProperty Name="ItemTypeId" ColumnName="ItemTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemTypes">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.ItemType">
+        <MappingFragment StoreEntitySet="ItemType">
+          <ScalarProperty Name="ItemTypeId" ColumnName="ItemTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BaseRate" ColumnName="BaseRate" />
+          <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+          <ScalarProperty Name="HoursWorked" ColumnName="HoursWorked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+          <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+          <ScalarProperty Name="AvatarId" ColumnName="AvatarId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlayerInGames">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.PlayerInGame">
+        <MappingFragment StoreEntitySet="PlayerInGame">
+          <ScalarProperty Name="PlayerPosition" ColumnName="PlayerPosition" />
+          <ScalarProperty Name="Accepted" ColumnName="Accepted" />
+          <ScalarProperty Name="PlayerInGameId" ColumnName="PlayerInGameId" />
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turns">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.Turn">
+        <MappingFragment StoreEntitySet="Turn">
+          <ScalarProperty Name="TimeLeft" ColumnName="TimeLeft" />
+          <ScalarProperty Name="TurnId" ColumnName="TurnId" />
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+          <ScalarProperty Name="TurnInGame" ColumnName="TurnInGame" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocietyTypes">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.SocietyType">
+        <MappingFragment StoreEntitySet="SocietyType">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SocietyTypeId" ColumnName="SocietyTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schools">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.School">
+        <MappingFragment StoreEntitySet="School">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlayerSystems">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.PlayerSystem">
+        <MappingFragment StoreEntitySet="PlayerSystem">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PlayerSystem1" ColumnName="PlayerSystem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TurnMoves">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.TurnMove">
+        <MappingFragment StoreEntitySet="TurnMove">
+          <ScalarProperty Name="TimeUsed" ColumnName="TimeUsed" />
+          <ScalarProperty Name="Bought" ColumnName="Bought" />
+          <ScalarProperty Name="TurnTo" ColumnName="TurnTo" />
+          <ScalarProperty Name="TurnFrom" ColumnName="TurnFrom" />
+          <ScalarProperty Name="TurnId" ColumnName="TurnId" />
+          <ScalarProperty Name="TurnMoveId" ColumnName="TurnMoveId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
