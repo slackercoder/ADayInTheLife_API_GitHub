@@ -61,3 +61,4 @@ C:\Users\Mario\Source\Repos\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI\b
 C:\Users\Mario\Source\Repos\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.WebPages.Razor.xml
 C:\Users\Mario\Source\Repos\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI\obj\Debug\ADayInTheLifeAPI.dll
 C:\Users\Mario\Source\Repos\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI\obj\Debug\ADayInTheLifeAPI.pdb
+C:\Users\Mario\Source\Repos\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI\obj\Debug\ADayInTheLifeAPI.csprojResolveAssemblyReference.cache

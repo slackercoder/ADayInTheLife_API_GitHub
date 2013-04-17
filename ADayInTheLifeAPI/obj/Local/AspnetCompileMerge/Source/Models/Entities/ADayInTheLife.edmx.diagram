@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="535931b3635649dfa3c3bb3a7f3e175f" Name="Diagram1">
+        <EntityTypeShape EntityType="ADayInTheLifeModel.Avatar" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.Building" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.Education" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.Game" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.Item" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.ItemType" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.Job" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.Player" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.PlayerInGame" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.Turn" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.SocietyType" Width="1.5" PointX="11.097272581931797" PointY="28.056199191164318" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.School" Width="1.5" PointX="2.3654979832309753" PointY="20.924633438198192" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.PlayerSystem" Width="1.5" PointX="5.1396316332461458" PointY="9.1525063259305934" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.TurnMove" Width="1.5" PointX="4.6472356024418193" PointY="31.925142362678955" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

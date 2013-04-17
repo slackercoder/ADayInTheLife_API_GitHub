@@ -19,6 +19,7 @@
         <EntityTypeShape EntityType="ADayInTheLifeModel.School" Width="1.5" PointX="2.3654979832309753" PointY="20.924633438198192" />
         <EntityTypeShape EntityType="ADayInTheLifeModel.PlayerSystem" Width="1.5" PointX="5.1396316332461458" PointY="9.1525063259305934" />
         <EntityTypeShape EntityType="ADayInTheLifeModel.TurnMove" Width="1.5" PointX="4.6472356024418193" PointY="31.925142362678955" />
+        <EntityTypeShape EntityType="ADayInTheLifeModel.ErrorLog" Width="1.5" PointX="10.258091417261442" PointY="16.96831022993117" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

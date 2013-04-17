@@ -1,0 +1,153 @@
+﻿
+<style>
+    button 
+    {
+        height: 100px;
+        width: 100px;
+        background-color: #0a0;
+        margin: 10px;
+    }
+    
+    .row
+    {
+        width: 100%;
+        height: 120px;
+    }
+
+    .outputRow
+    {
+        width: 100%;
+        height: 400px;
+    }
+
+    .rowHead
+    {
+        width: 200px;
+    }
+</style>
+
+<div class="row">
+    <span class="rowHead">Game Actions:</span> 
+    <button id="gameStart">New Game</button>
+    <button id="allGames">Get All Games</button>
+    <button id="gameOne">Get Game 1</button>        
+</div>
+<div class="row">
+    <span class="rowHead">Turn Actions: </span>
+    <button id="startTurn">Start Turn</button>
+    <button id="turnTravel">Travel</button>
+    <button id="turnRelax">Relax</button>
+    <button id="turnWork">Work</button>
+    <button id="turnLearn">Learn</button>
+</div>
+<div class="outputRow">
+    <div style="border: 1px solid black; width: 99%; height: 100%; overflow: auto;" id="output">
+
+    </div>
+</div>
+
+<script>
+    $(function () {
+
+        var gameData = {
+            GameId: 0,
+            Players: 4,
+            PlayerNames: ['SlackerCoder', 'Program247365', 'Miex0r'],
+            WinCondition1: 100,
+            WinCondition2: 100,
+            WinCondition3: 100,
+            WinCondition4: 100
+        };
+
+        var processedInput = JSON.stringify(gameData);
+
+        $("#gameStart").click(function () {
+            $.ajax({
+                type: 'post',
+                contentType: 'application/json',
+                dataType: 'json',
+                url: "api/Game/PostStartGame",
+                data: processedInput,
+                success: function (data, textStatus, jqXHR) {
+                    alert("This worked");
+                    $("#output").html(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert("This did not work");
+                }
+            });
+        });
+
+        $("#allGames").click(function () {
+            $.ajax({
+                type: 'get',
+                contentType: 'application/json',
+                dataType: 'json',
+                url: "api/Game/GetGames",
+                success: function (data) {
+                    alert("This worked");
+
+                    var output = "";
+                    $("#output").html("");
+
+                    $.each(data, function (id, val) {
+                        output += "GameId: " + val.GameId + "<br />";
+                        output += "Players: " + val.Players + "<br />";
+                        output += "WinCondition1: " + val.WinCondition1 + "<br />";
+                        output += "WinCondition2: " + val.WinCondition2 + "<br />";
+                        output += "WinCondition3: " + val.WinCondition3 + "<br />";
+                        output += "WinCondition4: " + val.WinCondition4 + "<br />";
+                        output += "<br />";
+                    });
+
+                    $("#output").html(output);
+                },
+                error: function (data) {
+                    alert("This did not work");
+                }
+            });
+        });
+
+        var gameId = 1;
+
+        $("#gameOne").click(function () {
+            $.ajax({
+                type: 'get',
+                contentType: 'application/json',
+                dataType: 'json',
+                url: "api/Game/GetGameById",
+                data: { id: gameId },
+                success: function (data) {
+                    alert("This worked");
+                    $("#output").html(data);
+                },
+                error: function (data) {
+                    alert("This did not work");
+                }
+            });
+        });
+
+
+
+
+        /*************************************************************/
+        /*        TURN ACTIONS                                       */
+        /*************************************************************/
+        $("#startTurn").click(function () {
+        });
+
+        $("#runLearn").click(function () {
+        });
+
+        $("#runWork").click(function () {
+        });
+
+        $("#runRelax").click(function () {
+        });
+
+        $("#runTravel").click(function () {
+        });
+
+    });
+
+</script>

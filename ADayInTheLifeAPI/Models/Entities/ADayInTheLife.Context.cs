@@ -39,5 +39,6 @@ namespace ADayInTheLifeAPI.Models.Entities
         public DbSet<School> Schools { get; set; }
         public DbSet<PlayerSystem> PlayerSystems { get; set; }
         public DbSet<TurnMove> TurnMoves { get; set; }
+        public DbSet<ErrorLog> ErrorLogs { get; set; }
     }
 }

@@ -15,7 +15,7 @@
     <AssemblyName>ADayInTheLifeAPI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -127,6 +127,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\Entities\ErrorLog.cs">
+      <DependentUpon>ADayInTheLife.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Interfaces\IPlayerRepo.cs" />
     <Compile Include="Models\Interfaces\ITurnRepo.cs" />
     <Compile Include="Models\PlayerModel.cs" />
@@ -274,6 +277,7 @@
       <DependentUpon>ADayInTheLife.edmx</DependentUpon>
       <LastGenOutput>ADayInTheLife.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\A Day In The Life.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -352,11 +356,13 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>17322</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:9651/</IISUrl>
+          <IISUrl>http://localhost/ADayInTheLifeAPI</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://adayinthelifeapi/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

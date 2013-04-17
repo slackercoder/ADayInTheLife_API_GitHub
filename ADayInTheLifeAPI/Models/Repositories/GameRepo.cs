@@ -89,7 +89,13 @@ namespace ADayInTheLifeAPI.Models.Repositories
                 }
                 catch (Exception e)
                 {
-                    //TODO: Log this.
+                    ErrorLog el = new ErrorLog()
+                    {
+                        Message = e.Message,
+                        StackDump = e.InnerException == null ? e.InnerException.Message : String.Empty
+                    };
+
+                    db.ErrorLogs.Add(el);
                 } 
             }
 
@@ -123,7 +129,13 @@ namespace ADayInTheLifeAPI.Models.Repositories
                 }
                 catch (Exception e)
                 {
-                    //TODOL: Log This
+                    ErrorLog el = new ErrorLog()
+                    {
+                        Message = e.Message,
+                        StackDump = e.InnerException == null ? e.InnerException.Message : String.Empty
+                    };
+
+                    db.ErrorLogs.Add(el);
                 }
             }
 
@@ -157,7 +169,13 @@ namespace ADayInTheLifeAPI.Models.Repositories
                 }
                 catch (Exception e)
                 {
-                    //TODO: Log This.
+                    ErrorLog el = new ErrorLog()
+                    {
+                        Message = e.Message,
+                        StackDump = e.InnerException == null ? e.InnerException.Message : String.Empty
+                    };
+
+                    db.ErrorLogs.Add(el);
                 }
             }
             return ret;

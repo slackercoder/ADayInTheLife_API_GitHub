@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ADayInTheLifeModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ADayInTheLifeEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Avatars" EntityType="ADayInTheLifeModel.Avatar" />
+    <EntitySet Name="Buildings" EntityType="ADayInTheLifeModel.Building" />
+    <EntitySet Name="Educations" EntityType="ADayInTheLifeModel.Education" />
+    <EntitySet Name="Games" EntityType="ADayInTheLifeModel.Game" />
+    <EntitySet Name="Items" EntityType="ADayInTheLifeModel.Item" />
+    <EntitySet Name="ItemTypes" EntityType="ADayInTheLifeModel.ItemType" />
+    <EntitySet Name="Jobs" EntityType="ADayInTheLifeModel.Job" />
+    <EntitySet Name="Players" EntityType="ADayInTheLifeModel.Player" />
+    <EntitySet Name="PlayerInGames" EntityType="ADayInTheLifeModel.PlayerInGame" />
+    <EntitySet Name="Turns" EntityType="ADayInTheLifeModel.Turn" />
+    <EntitySet Name="SocietyTypes" EntityType="ADayInTheLifeModel.SocietyType" />
+    <EntitySet Name="Schools" EntityType="ADayInTheLifeModel.School" />
+    <EntitySet Name="PlayerSystems" EntityType="ADayInTheLifeModel.PlayerSystem" />
+    <EntitySet Name="TurnMoves" EntityType="ADayInTheLifeModel.TurnMove" />
+  </EntityContainer>
+  <EntityType Name="Avatar">
+    <Key>
+      <PropertyRef Name="AvatarId" />
+    </Key>
+    <Property Name="AvatarId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Location" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Building">
+    <Key>
+      <PropertyRef Name="BuildingId" />
+    </Key>
+    <Property Name="BuildingId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="SocietyTypeId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="EducationId" />
+    </Key>
+    <Property Name="EducationId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SchoolId" Type="Int32" Nullable="false" />
+    <Property Name="CourseName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Hours" Type="Int32" Nullable="false" />
+    <Property Name="PrerequisiteId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="GameId" />
+    </Key>
+    <Property Name="GameId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Players" Type="Int32" Nullable="false" />
+    <Property Name="WinCondition1" Type="Int32" Nullable="false" />
+    <Property Name="WinCondition2" Type="Int32" Nullable="false" />
+    <Property Name="WinCondition3" Type="Int32" Nullable="false" />
+    <Property Name="WinCondition4" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="CurrentTurn" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="BasePrice" Type="Int32" Nullable="false" />
+    <Property Name="ItemTypeId" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="Value" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemType">
+    <Key>
+      <PropertyRef Name="ItemTypeId" />
+    </Key>
+    <Property Name="ItemTypeId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="BaseRate" Type="Int32" Nullable="false" />
+    <Property Name="EducationId" Type="Int32" Nullable="false" />
+    <Property Name="HoursWorked" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="PlayerId" />
+    </Key>
+    <Property Name="PlayerId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PlayerName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="AvatarId" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="SystemId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlayerInGame">
+    <Key>
+      <PropertyRef Name="PlayerInGameId" />
+    </Key>
+    <Property Name="PlayerInGameId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="GameId" Type="Int32" Nullable="false" />
+    <Property Name="PlayerId" Type="Int32" Nullable="false" />
+    <Property Type="Boolean" Name="Accepted" Nullable="false" />
+    <Property Type="Int32" Name="PlayerPosition" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Turn">
+    <Key>
+      <PropertyRef Name="TurnId" />
+    </Key>
+    <Property Name="TurnId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="GameId" Type="Int32" Nullable="false" />
+    <Property Name="PlayerId" Type="Int32" Nullable="false" />
+    <Property Name="TurnInGame" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="TimeLeft" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SocietyType">
+    <Key>
+      <PropertyRef Name="SocietyTypeId" />
+    </Key>
+    <Property Type="Int32" Name="SocietyTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="School">
+    <Key>
+      <PropertyRef Name="SchoolId" />
+    </Key>
+    <Property Type="Int32" Name="SchoolId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PlayerSystem">
+    <Key>
+      <PropertyRef Name="PlayerSystem1" />
+    </Key>
+    <Property Type="Int32" Name="PlayerSystem1" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TurnMove">
+    <Key>
+      <PropertyRef Name="TurnMoveId" />
+    </Key>
+    <Property Type="Int32" Name="TurnMoveId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="TurnId" Nullable="false" />
+    <Property Type="Int32" Name="TurnFrom" Nullable="false" />
+    <Property Type="Int32" Name="TurnTo" Nullable="false" />
+    <Property Type="Int32" Name="Bought" Nullable="false" />
+    <Property Type="Int32" Name="TimeUsed" Nullable="false" />
+  </EntityType>
+</Schema>

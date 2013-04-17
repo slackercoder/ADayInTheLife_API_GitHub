@@ -9,6 +9,7 @@
           <EntitySet Name="Avatar" EntityType="ADayInTheLifeModel.Store.Avatar" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Building" EntityType="ADayInTheLifeModel.Store.Building" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Education" EntityType="ADayInTheLifeModel.Store.Education" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ErrorLog" EntityType="ADayInTheLifeModel.Store.ErrorLog" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Game" EntityType="ADayInTheLifeModel.Store.Game" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Item" EntityType="ADayInTheLifeModel.Store.Item" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ItemType" EntityType="ADayInTheLifeModel.Store.ItemType" store:Type="Tables" Schema="dbo" />
@@ -46,6 +47,14 @@
           <Property Name="CourseName" Type="varchar" Nullable="false" MaxLength="200" />
           <Property Name="Hours" Type="int" Nullable="false" />
           <Property Name="PrerequisiteId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="ErrorId" />
+          </Key>
+          <Property Name="ErrorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Message" Type="varchar(max)" />
+          <Property Name="StackDump" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Game">
           <Key>
@@ -167,6 +176,7 @@
           <EntitySet Name="Schools" EntityType="ADayInTheLifeModel.School" />
           <EntitySet Name="PlayerSystems" EntityType="ADayInTheLifeModel.PlayerSystem" />
           <EntitySet Name="TurnMoves" EntityType="ADayInTheLifeModel.TurnMove" />
+          <EntitySet Name="ErrorLogs" EntityType="ADayInTheLifeModel.ErrorLog" />
         </EntityContainer>
         <EntityType Name="Avatar">
           <Key>
@@ -294,6 +304,14 @@
           <Property Type="Int32" Name="TurnTo" Nullable="false" />
           <Property Type="Int32" Name="Bought" Nullable="false" />
           <Property Type="Int32" Name="TimeUsed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="ErrorId" />
+          </Key>
+          <Property Type="Int32" Name="ErrorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StackDump" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -439,6 +457,15 @@
                 <ScalarProperty Name="TurnFrom" ColumnName="TurnFrom" />
                 <ScalarProperty Name="TurnId" ColumnName="TurnId" />
                 <ScalarProperty Name="TurnMoveId" ColumnName="TurnMoveId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ErrorLogs">
+            <EntityTypeMapping TypeName="ADayInTheLifeModel.ErrorLog">
+              <MappingFragment StoreEntitySet="ErrorLog">
+                <ScalarProperty Name="StackDump" ColumnName="StackDump" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="ErrorId" ColumnName="ErrorId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
