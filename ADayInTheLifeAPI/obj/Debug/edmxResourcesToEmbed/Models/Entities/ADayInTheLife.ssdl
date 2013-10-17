@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ADayInTheLifeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="ADayInTheLifeModelStoreContainer">
+    <EntitySet Name="Account" EntityType="ADayInTheLifeModel.Store.Account" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Avatar" EntityType="ADayInTheLifeModel.Store.Avatar" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Building" EntityType="ADayInTheLifeModel.Store.Building" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Education" EntityType="ADayInTheLifeModel.Store.Education" store:Type="Tables" Schema="dbo" />
@@ -16,6 +17,16 @@
     <EntitySet Name="Turn" EntityType="ADayInTheLifeModel.Store.Turn" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TurnMove" EntityType="ADayInTheLifeModel.Store.TurnMove" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountId" />
+    </Key>
+    <Property Name="AccountId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MiddleName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Avatar">
     <Key>
       <PropertyRef Name="AvatarId" />
@@ -130,6 +141,7 @@
     <Property Name="GameId" Type="int" Nullable="false" />
     <Property Name="PlayerId" Type="int" Nullable="false" />
     <Property Name="TurnInGame" Type="int" Nullable="false" />
+    <Property Name="TimeLeft" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TurnMove">
     <Key>
@@ -140,5 +152,6 @@
     <Property Name="TurnFrom" Type="int" Nullable="false" />
     <Property Name="TurnTo" Type="int" Nullable="false" />
     <Property Name="Bought" Type="int" Nullable="false" />
+    <Property Name="TimeUsed" Type="int" Nullable="false" />
   </EntityType>
 </Schema>

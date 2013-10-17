@@ -13,6 +13,6 @@ namespace ADayInTheLifeAPI.Models.Interfaces
         GameModel GameById(int id);
 
         List<Account> GetAccounts();
-        List<Account> AccountById(int id);
+        Account AccountById(int id);
     }
 }

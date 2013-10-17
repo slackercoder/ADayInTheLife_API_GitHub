@@ -62,3 +62,34 @@ C:\Users\Mario Folino\Sources\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI
 C:\Users\Mario Folino\Sources\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI\obj\Debug\ADayInTheLifeAPI.csprojResolveAssemblyReference.cache
 C:\Users\Mario Folino\Sources\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI\obj\Debug\ADayInTheLifeAPI.dll
 C:\Users\Mario Folino\Sources\ADayInTheLifeAPI\ADayInTheLifeAPI\ADayInTheLifeAPI\obj\Debug\ADayInTheLifeAPI.pdb
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\ADayInTheLifeAPI.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\ADayInTheLifeAPI.pdb
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\Antlr3.Runtime.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\EntityFramework.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\Newtonsoft.Json.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Helpers.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Http.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Mvc.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Optimization.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Providers.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Razor.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.WebPages.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\WebGrease.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\EntityFramework.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\Newtonsoft.Json.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Helpers.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Http.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Mvc.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.Razor.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.WebPages.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\obj\Debug\ADayInTheLifeAPI.dll
+C:\Users\mfolino\Source\Repos\A Day in the Life API\ADayInTheLifeAPI\ADayInTheLifeAPI\obj\Debug\ADayInTheLifeAPI.pdb
