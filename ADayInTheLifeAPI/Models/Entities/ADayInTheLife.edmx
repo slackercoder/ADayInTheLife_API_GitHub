@@ -6,10 +6,10 @@
     <edmx:StorageModels>
     <Schema Namespace="ADayInTheLifeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="ADayInTheLifeModelStoreContainer">
+          <EntitySet Name="Account" EntityType="ADayInTheLifeModel.Store.Account" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Avatar" EntityType="ADayInTheLifeModel.Store.Avatar" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Building" EntityType="ADayInTheLifeModel.Store.Building" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Education" EntityType="ADayInTheLifeModel.Store.Education" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ErrorLog" EntityType="ADayInTheLifeModel.Store.ErrorLog" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Game" EntityType="ADayInTheLifeModel.Store.Game" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Item" EntityType="ADayInTheLifeModel.Store.Item" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ItemType" EntityType="ADayInTheLifeModel.Store.ItemType" store:Type="Tables" Schema="dbo" />
@@ -22,6 +22,16 @@
           <EntitySet Name="Turn" EntityType="ADayInTheLifeModel.Store.Turn" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TurnMove" EntityType="ADayInTheLifeModel.Store.TurnMove" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountId" />
+          </Key>
+          <Property Name="AccountId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MiddleName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Avatar">
           <Key>
             <PropertyRef Name="AvatarId" />
@@ -47,14 +57,6 @@
           <Property Name="CourseName" Type="varchar" Nullable="false" MaxLength="200" />
           <Property Name="Hours" Type="int" Nullable="false" />
           <Property Name="PrerequisiteId" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="ErrorLog">
-          <Key>
-            <PropertyRef Name="ErrorId" />
-          </Key>
-          <Property Name="ErrorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Message" Type="varchar(max)" />
-          <Property Name="StackDump" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Game">
           <Key>
@@ -176,7 +178,7 @@
           <EntitySet Name="Schools" EntityType="ADayInTheLifeModel.School" />
           <EntitySet Name="PlayerSystems" EntityType="ADayInTheLifeModel.PlayerSystem" />
           <EntitySet Name="TurnMoves" EntityType="ADayInTheLifeModel.TurnMove" />
-          <EntitySet Name="ErrorLogs" EntityType="ADayInTheLifeModel.ErrorLog" />
+          <EntitySet Name="Accounts" EntityType="ADayInTheLifeModel.Account" />
         </EntityContainer>
         <EntityType Name="Avatar">
           <Key>
@@ -305,13 +307,15 @@
           <Property Type="Int32" Name="Bought" Nullable="false" />
           <Property Type="Int32" Name="TimeUsed" Nullable="false" />
         </EntityType>
-        <EntityType Name="ErrorLog">
+        <EntityType Name="Account">
           <Key>
-            <PropertyRef Name="ErrorId" />
+            <PropertyRef Name="AccountId" />
           </Key>
-          <Property Type="Int32" Name="ErrorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="StackDump" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AccountId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MiddleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -460,12 +464,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ErrorLogs">
-            <EntityTypeMapping TypeName="ADayInTheLifeModel.ErrorLog">
-              <MappingFragment StoreEntitySet="ErrorLog">
-                <ScalarProperty Name="StackDump" ColumnName="StackDump" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
-                <ScalarProperty Name="ErrorId" ColumnName="ErrorId" />
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="ADayInTheLifeModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

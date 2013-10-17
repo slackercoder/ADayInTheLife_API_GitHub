@@ -89,13 +89,7 @@ namespace ADayInTheLifeAPI.Models.Repositories
                 }
                 catch (Exception e)
                 {
-                    ErrorLog el = new ErrorLog()
-                    {
-                        Message = e.Message,
-                        StackDump = e.InnerException == null ? e.InnerException.Message : String.Empty
-                    };
-
-                    db.ErrorLogs.Add(el);
+                    //TODO: Log this.
                 } 
             }
 
@@ -129,13 +123,7 @@ namespace ADayInTheLifeAPI.Models.Repositories
                 }
                 catch (Exception e)
                 {
-                    ErrorLog el = new ErrorLog()
-                    {
-                        Message = e.Message,
-                        StackDump = e.InnerException == null ? e.InnerException.Message : String.Empty
-                    };
-
-                    db.ErrorLogs.Add(el);
+                    //TODOL: Log This
                 }
             }
 
@@ -169,16 +157,34 @@ namespace ADayInTheLifeAPI.Models.Repositories
                 }
                 catch (Exception e)
                 {
-                    ErrorLog el = new ErrorLog()
-                    {
-                        Message = e.Message,
-                        StackDump = e.InnerException == null ? e.InnerException.Message : String.Empty
-                    };
-
-                    db.ErrorLogs.Add(el);
+                    //TODO: Log This.
                 }
             }
             return ret;
+        }
+
+        public List<Account> GetAccounts()
+        {
+            List<Account> list = new List<Account>();
+
+            using (ADayInTheLifeEntities data = new ADayInTheLifeEntities())
+            {
+                list = data.Accounts.ToList();
+            }
+
+            return list;
+        }
+
+        public Account AccountById(int id)
+        {
+            Account acc = new Account();
+
+            using (ADayInTheLifeEntities data = new ADayInTheLifeEntities())
+            {
+                acc = data.Accounts.Where(o => o.AccountId == id).FirstOrDefault();
+            }
+
+            return acc;
         }
     }
 }

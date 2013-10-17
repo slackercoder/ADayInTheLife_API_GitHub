@@ -130,7 +130,6 @@
     <Property Name="GameId" Type="int" Nullable="false" />
     <Property Name="PlayerId" Type="int" Nullable="false" />
     <Property Name="TurnInGame" Type="int" Nullable="false" />
-    <Property Name="TimeLeft" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TurnMove">
     <Key>
@@ -141,6 +140,5 @@
     <Property Name="TurnFrom" Type="int" Nullable="false" />
     <Property Name="TurnTo" Type="int" Nullable="false" />
     <Property Name="Bought" Type="int" Nullable="false" />
-    <Property Name="TimeUsed" Type="int" Nullable="false" />
   </EntityType>
 </Schema>

@@ -97,11 +97,21 @@
     <EntitySetMapping Name="Turns">
       <EntityTypeMapping TypeName="ADayInTheLifeModel.Turn">
         <MappingFragment StoreEntitySet="Turn">
-          <ScalarProperty Name="TimeLeft" ColumnName="TimeLeft" />
           <ScalarProperty Name="TurnId" ColumnName="TurnId" />
           <ScalarProperty Name="GameId" ColumnName="GameId" />
           <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
           <ScalarProperty Name="TurnInGame" ColumnName="TurnInGame" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TurnMoves">
+      <EntityTypeMapping TypeName="ADayInTheLifeModel.TurnMove">
+        <MappingFragment StoreEntitySet="TurnMove">
+          <ScalarProperty Name="TurnMoveId" ColumnName="TurnMoveId" />
+          <ScalarProperty Name="TurnId" ColumnName="TurnId" />
+          <ScalarProperty Name="TurnFrom" ColumnName="TurnFrom" />
+          <ScalarProperty Name="TurnTo" ColumnName="TurnTo" />
+          <ScalarProperty Name="Bought" ColumnName="Bought" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -127,18 +137,6 @@
         <MappingFragment StoreEntitySet="PlayerSystem">
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="PlayerSystem1" ColumnName="PlayerSystem" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TurnMoves">
-      <EntityTypeMapping TypeName="ADayInTheLifeModel.TurnMove">
-        <MappingFragment StoreEntitySet="TurnMove">
-          <ScalarProperty Name="TimeUsed" ColumnName="TimeUsed" />
-          <ScalarProperty Name="Bought" ColumnName="Bought" />
-          <ScalarProperty Name="TurnTo" ColumnName="TurnTo" />
-          <ScalarProperty Name="TurnFrom" ColumnName="TurnFrom" />
-          <ScalarProperty Name="TurnId" ColumnName="TurnId" />
-          <ScalarProperty Name="TurnMoveId" ColumnName="TurnMoveId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

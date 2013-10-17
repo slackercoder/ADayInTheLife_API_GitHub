@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ADayInTheLifeAPI.Models.Entities;
 
 namespace ADayInTheLifeAPI.Controllers
 {
@@ -35,6 +36,26 @@ namespace ADayInTheLifeAPI.Controllers
             response.Headers.Location = new Uri(uri);
             return response;
         }
+
+        public HttpResponseMessage GetAccounts()
+        {
+            var item = gameRepository.GetAccounts();
+            var response = Request.CreateResponse<List<Account>>(HttpStatusCode.Created, item);
+
+            string uri = Url.Link("DefaultApiWithAction", new { id = item.First().AccountId });
+            response.Headers.Location = new Uri(uri);
+            return response;
+        }
+
+        //public HttpResponseMessage GetAccountById(int id)
+        //{
+        //    var item = gameRepository.AccountById(id);
+        //    var response = Request.CreateResponse<Account>(HttpStatusCode.Created, item);
+
+        //    string uri = Url.Link("DefaultApiWithAction", new { id = item.AccountId });
+        //    response.Headers.Location = new Uri(uri);
+        //    return response;
+        //}
 
         [HttpGet]
         public HttpResponseMessage GetGameById(int id)

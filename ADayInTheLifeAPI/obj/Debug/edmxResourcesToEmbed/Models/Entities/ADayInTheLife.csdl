@@ -11,10 +11,10 @@
     <EntitySet Name="Players" EntityType="ADayInTheLifeModel.Player" />
     <EntitySet Name="PlayerInGames" EntityType="ADayInTheLifeModel.PlayerInGame" />
     <EntitySet Name="Turns" EntityType="ADayInTheLifeModel.Turn" />
+    <EntitySet Name="TurnMoves" EntityType="ADayInTheLifeModel.TurnMove" />
     <EntitySet Name="SocietyTypes" EntityType="ADayInTheLifeModel.SocietyType" />
     <EntitySet Name="Schools" EntityType="ADayInTheLifeModel.School" />
     <EntitySet Name="PlayerSystems" EntityType="ADayInTheLifeModel.PlayerSystem" />
-    <EntitySet Name="TurnMoves" EntityType="ADayInTheLifeModel.TurnMove" />
   </EntityContainer>
   <EntityType Name="Avatar">
     <Key>
@@ -108,7 +108,16 @@
     <Property Name="GameId" Type="Int32" Nullable="false" />
     <Property Name="PlayerId" Type="Int32" Nullable="false" />
     <Property Name="TurnInGame" Type="Int32" Nullable="false" />
-    <Property Type="Int32" Name="TimeLeft" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TurnMove">
+    <Key>
+      <PropertyRef Name="TurnMoveId" />
+    </Key>
+    <Property Name="TurnMoveId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TurnId" Type="Int32" Nullable="false" />
+    <Property Name="TurnFrom" Type="Int32" Nullable="false" />
+    <Property Name="TurnTo" Type="Int32" Nullable="false" />
+    <Property Name="Bought" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="SocietyType">
     <Key>
@@ -131,16 +140,5 @@
     </Key>
     <Property Type="Int32" Name="PlayerSystem1" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="TurnMove">
-    <Key>
-      <PropertyRef Name="TurnMoveId" />
-    </Key>
-    <Property Type="Int32" Name="TurnMoveId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int32" Name="TurnId" Nullable="false" />
-    <Property Type="Int32" Name="TurnFrom" Nullable="false" />
-    <Property Type="Int32" Name="TurnTo" Nullable="false" />
-    <Property Type="Int32" Name="Bought" Nullable="false" />
-    <Property Type="Int32" Name="TimeUsed" Nullable="false" />
   </EntityType>
 </Schema>
